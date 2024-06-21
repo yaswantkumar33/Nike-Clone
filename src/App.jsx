@@ -1,14 +1,43 @@
-import { useState } from "react";
-import "./App.css";
+import Nav from "./Components/Nav";
+import {
+  Footer,
+  PopularProduct,
+  Services,
+  SpecialOffer,
+  Subscribe,
+  SuperQuality,
+  Customerreview,
+  Hero,
+} from "./sections/index";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <h3 className="text-2xl font-bold text-[#363636]">Hello World !</h3>
-    </>
-  );
-}
+const App = () => (
+  <main className="relative">
+    <Nav />
+    <section className="xl:padding-l wide:padding-r padding-b">
+      <Hero />
+    </section>
+    <section className="padding">
+      <PopularProduct />
+    </section>
+    <section className="padding">
+      <SuperQuality />
+    </section>
+    <section className="padding-x py-10">
+      <Services />
+    </section>
+    <section className="padding">
+      <SpecialOffer />
+    </section>
+    <section className="padding bg-pale-blue">
+      <Customerreview />
+    </section>
+    <section className="padding-x sm:py-32 py-15 w-full">
+      <Subscribe />
+    </section>
+    <section className="padding-x padding-t pb-8 bg-black">
+      <Footer />
+    </section>
+  </main>
+);
 
 export default App;
