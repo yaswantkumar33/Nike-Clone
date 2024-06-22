@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <>
       <header className="padding-x py-8 absolute z-10 w-full">
-        <nav className="flex justify-between items-center max-container animate-fade-up animate-once animate-duration-[1500ms]">
+        <nav className="flex justify-between items-center max-container animate-fade-down animate-once animate-duration-[1000ms] animate-ease-linear">
           <a href="/">
             <img src={headerLogo} alt="Logo" width={130} height={29} />
           </a>
