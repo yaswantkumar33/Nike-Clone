@@ -1,16 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  // content: [
-  //   "./index.html",
-  //   "./src/**/*.{js,ts,jsx,tsx}",
-
-  // ],  
-  content: {
-    relative: true,
-    transform: (content) => content.replace(/taos:/g, ''),
-    files: ['index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  },
-
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontSize: {
       xs: ['12px', '16px'],
@@ -48,13 +41,6 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animated'),
-    require('taos/plugin')
+    require('tailwindcss-animated')
   ],
-  safelist: [
-    '!duration-[0ms]',
-    '!delay-[0ms]',
-    'html.js :where([class*="taos:"]:not(.taos-init))'
-  ],
-
 }
