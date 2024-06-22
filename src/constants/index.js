@@ -21,6 +21,7 @@ export const shoes = [
         thumbnail: thumbnailShoe3,
         bigShoe: bigShoe3,
     },
+
 ];
 
 export const statistics = [
