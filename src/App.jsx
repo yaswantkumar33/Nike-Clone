@@ -10,6 +10,9 @@ import {
   Hero,
 } from "./sections/index";
 
+// import Aos from "aos";
+// import "aos/dist/aos";
+
 const App = () => (
   <main className="relative">
     <Nav />

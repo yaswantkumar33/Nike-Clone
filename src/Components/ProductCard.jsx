@@ -1,6 +1,6 @@
 import { star } from "../assets/icons";
 const ProductCard = ({ Product }) => {
-  console.log(Product);
+  // console.log(Product);
   return (
     <div className="flex flex-1 flex-col w-full max-sm:w-full">
       <img src={Product.imgURL} className="w-[280px] h-[280px]" alt="" />
