@@ -8,6 +8,7 @@ import ShoeCard from "./../Components/ShoeCard";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+  const [delayval, setdelayval] = useState(1);
 
   return (
     <>
@@ -54,20 +55,28 @@ const Hero = () => {
             alt="shoe colletion"
             width={610}
             height={502}
-            className="object-contain relative z-10"
+            className="object-contain relative z-10 animate-fade-left animate-once animate-delay-[525ms] animate-ease-linear"
           />
 
           <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-            {shoes.map((image, index) => (
-              <div key={index}>
-                <ShoeCard
-                  index={index}
-                  imgURL={image}
-                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
-                  bigShoeImg={bigShoeImg}
-                />
-              </div>
-            ))}
+            {shoes.map((image, index) => {
+              if (delayval - 3 < index) {
+                setdelayval((prv) => {
+                  return prv + 2;
+                });
+              }
+              return (
+                <div key={index}>
+                  <ShoeCard
+                    index={index}
+                    imgURL={image}
+                    changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
+                    bigShoeImg={bigShoeImg}
+                    delay={delayval}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
